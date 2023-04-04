@@ -6,6 +6,7 @@ import Addphoto from '../cards/Addphoto'
 import Loader from '../cards/Loder'
 const Home = () => {
   const [loderStatus, setLoder] = useState(false)
+  const [popupState, sePopupState] = useState(false)
   const[updateStae, setupdateState] = useState(false)
   let [imageDta, setImageDta] = useState([])
   let [addPhotoComponentStatus,setaddPhotoComponentStatus] = useState(false)
@@ -23,15 +24,18 @@ const Home = () => {
       .catch(err=> console.log(err)).finally(()=>setLoder(false))
   },[updateStae])
   return (
-    <div>
+    <div className={popupState? "activePopup": ""}>
             <Header 
             data={imageDta} 
+            popupdata = {{popupState , sePopupState}}
             setImageDta={setImageDta}
             setaddPhotoComponentStatus={setaddPhotoComponentStatus}/>
       
       {addPhotoComponentStatus ? <Addphoto
       setaddPhotoComponentStatus={setaddPhotoComponentStatus}
-      data = {{updateStae, setupdateState}}      
+      data = {{updateStae, setupdateState}} 
+      popupdata = {{popupState , sePopupState}}
+           
       />:""}
 
 
@@ -40,6 +44,7 @@ const Home = () => {
           imageDta.map((data,inx)=>{
             return (
                 <Image key={inx*0.0551} data={data}
+                popupdata = {{popupState , sePopupState}}
                 data2 = {{updateStae, setupdateState}}  />
             )
           })

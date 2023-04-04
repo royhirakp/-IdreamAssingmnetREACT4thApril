@@ -4,19 +4,52 @@
 /* //ADDPHOTO */
 
 .uplodePhotoContainer{
-    /* border: 1PX solid; */
+    border: 1PX solid;
     display: inline-block;
     width: 463px;
-    height: 236px;
+    height: 196px;
     background-color: #fff;
     position: fixed;
-    top: 150px;
+    z-index: 555;
+    top: 20px;
     right: 20%;
     border-radius: 8px;
     /* height: 129px; */
     padding: 1px;
-    border: none;
+    /* border: none; */
+    box-shadow: 2px 2px 2px 2px;
+    transition: top 0ms ease-in-out 0ms,
+                opacity 300ms ease-in-out,
+                margin-top 300ms ease-in-out;
 }
+.uplodePhotoContainer >*{
+    margin: 5px;
+}
+
+.activePopup {
+    overflow: hidden;
+}
+.imageDiaplayContainaer{
+    transition: filter 0ms ease-in-out 300ms;
+}
+.activePopup .imageDiaplayContainaer {
+    filter: blur(2px);
+    background:rgba(0,0,0,0.08);
+    transition: filter 0ms ease-in-out 0ms;
+}
+.activePopup .uplodePhotoContainer {
+    top: 30%;
+    opacity: 1;
+    margin-top: 0px;
+    transition: top 0ms ease-in-out 0ms,
+                opacity 300ms ease-in-out,
+                margin-top 300ms ease-in-out;
+}
+
+/* ///css for pop uppp */
+
+
+
 .uplodePhotoContainer p{
     text-align: left;
     padding-left: 10px;
@@ -100,14 +133,15 @@
 /* DELETE POPUPPPP */
 
 .deletepopup{
-    padding: 20px;
-    width: 257px;
+    padding: 25px;
+    width: 274px;
     /* border: 1px solid; */
     border-radius: 6px;
     position: fixed;
     z-index: 5555;
     background-color: #fff;
     height: 154px;
+    box-shadow: 1px 0px 15px 2px;
 }
 .imagediv{
     border-radius: 10px;

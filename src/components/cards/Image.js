@@ -12,6 +12,7 @@ const Image = (props) => {
     async function handelDelete(){
       setdeletePopupStatus(true)
       console.log(props.data._id)
+      // props.popupdata.sePopupState(!props.popupdata.popupState)
       // try {
       //   let res = await axios.delete(`https://idreamassingmnet.onrender.com/image/${props.data._id}`)
       //   console.log(res)
@@ -39,6 +40,7 @@ const Image = (props) => {
       {
         deletePopupStatus? <Delete
         set={setdeletePopupStatus}
+        popupHandel= {props.popupdata.sePopupState}
         data2 = {props.data2}
         data ={props.data._id}
         /> : ""

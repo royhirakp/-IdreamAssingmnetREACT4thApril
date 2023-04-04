@@ -4,7 +4,7 @@ import axios from 'axios';
 import Loader from '../cards/Loder';
 import AutoAwesomeMosaicIcon from '@mui/icons-material/AutoAwesomeMosaic';
 const Header = (props) => {
-    // console.log(props,"from hesaddd=====")
+    console.log(props.popupdata.popupState,"from hesaddd=====")
     const [loderStatus, setLoder] = useState(false)
     const [searchInput, setSearchInput] = useState('')
     async function serchdata(){
@@ -52,7 +52,12 @@ const Header = (props) => {
                 placeholder='search by leabel' />
             </div>
             <div className="addPhButton">
-                <button onClick={()=>props.setaddPhotoComponentStatus(true)}>Add a Photo</button>
+                <button 
+                onClick={()=>{
+                    props.setaddPhotoComponentStatus(true)
+                    props.popupdata.sePopupState(!props.popupdata.popupState)
+                }}
+                >Add a Photo</button>
             </div>
         </nav>
     </>

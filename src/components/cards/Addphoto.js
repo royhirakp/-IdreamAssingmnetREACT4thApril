@@ -6,7 +6,7 @@ const Addphoto = (props) => {
     let [label, setLebel] = useState('')
     const [imageFile, setImageFile] = useState('');
     const [loderStatus, setLoder] = useState(false)
-  
+    console.log(props)
    async function handelSubbmit(e){
         e.preventDefault()
         setLoder(true)
@@ -24,6 +24,7 @@ const Addphoto = (props) => {
             console.log(error)
         }
         props.data.setupdateState(!props.data.updateStae)
+        props.popupdata.sePopupState(!props.popupdata.popupState)
         props.setaddPhotoComponentStatus(false)
         setLoder(false)
     }
@@ -45,7 +46,10 @@ const Addphoto = (props) => {
       </form>
       <button 
       className='addphotopopupCancle'
-        onClick={()=>props.setaddPhotoComponentStatus(false)}>
+        onClick={()=>{
+          props.setaddPhotoComponentStatus(false)
+          props.popupdata.sePopupState(false)
+        }}>
         Cancel
       </button>
       {loderStatus ? <Loader/>: "" }
