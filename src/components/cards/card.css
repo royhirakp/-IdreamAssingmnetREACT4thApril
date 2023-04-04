@@ -1,0 +1,184 @@
+
+
+
+/* //ADDPHOTO */
+
+.uplodePhotoContainer{
+    /* border: 1PX solid; */
+    display: inline-block;
+    width: 463px;
+    height: 236px;
+    background-color: #fff;
+    position: fixed;
+    top: 150px;
+    right: 20%;
+    border-radius: 8px;
+    /* height: 129px; */
+    padding: 1px;
+    border: none;
+}
+.uplodePhotoContainer p{
+    text-align: left;
+    padding-left: 10px;
+    /* border: 1px solid; */
+    /* display: inline-block; */
+    font-weight: 600;
+}
+.uplodePhotoContainer form label{
+    text-align: left;
+    /* border: 1px solid; */
+    float: left;
+    font-size: small;
+    padding-left: 20px;
+}
+
+.uplodePhotoContainer form input{
+    width: 90%;
+}
+.uplodePhotoContainer form button{
+    position: relative;
+    top: 11px;
+    left: 174px;
+    background-color: green;
+    border-radius: 8px;
+    width: 75px;
+    height: 28px;
+    /* margin: 10px 43px 2px 3px; */
+    color: #fff;
+    border: none;
+}
+.uplodePhotoContainer form button:hover{
+    cursor: pointer;
+    background-color: rgb(129, 217, 129);
+    color: #504f4f;
+}
+.addphotopopupCancle{
+    position: relative;
+    bottom: 16px;
+    left: 98px;
+    background-color: inherit;
+    border: none;
+    color: gray;
+    cursor: pointer;
+}
+.addphotopopupCancle:hover{
+    color: black;
+}
+
+
+
+/* image */
+/* img{
+    width: 95%;
+    height: 95%;
+} */
+.imageCradConatainer{
+    display: inline-block;
+    /* border: 1px solid; */
+    margin: 0 5px 0 5px;
+}
+.imageCradConatainer p{
+    /* display: inline-block; */
+    z-index: 5;
+    
+}
+.hoverDiv p{
+    display: inline;
+    float: inline-end;
+    position: relative;
+    color: #fff;
+    /* top: 150%; */
+    /* left: 80%; */
+    bottom: 80%;
+
+}
+.hoverDiv button{
+    /* display: inline; */
+    float: right;
+}
+
+/* DELETE POPUPPPP */
+
+.deletepopup{
+    padding: 20px;
+    width: 257px;
+    /* border: 1px solid; */
+    border-radius: 6px;
+    position: fixed;
+    z-index: 5555;
+    background-color: #fff;
+    height: 154px;
+}
+.imagediv{
+    border-radius: 10px;
+    /* border: 5px solid; */
+}
+.deletepopup form button{
+    background-color: rgb(242, 104, 104);
+    width: 65px;
+    height: 31px;
+    border: none;
+    border-radius: 9px;
+    margin: 2px 2px 2px 2px;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    left: 82px;
+    top: 9px;
+}
+.deletepopup form button:hover{
+    color: rgb(150, 108, 54);
+}
+img{
+    border-radius: 10px;
+}
+
+.hoverdivContainer{
+    /* width: 100%;
+    height: 2000px; */
+    /* border: 1px solid; */
+    height: 26px;
+    z-index: 99;
+    /* position: fixed; */
+    top: 50px;
+    left: 150px;
+}
+.hoverDiv button{
+    padding: 2px;
+    position: relative;
+    /* left: 390%; */
+    top: 40px;
+    right: 10px;
+    color: red;
+    background-color: inherit;
+    border: 3px solid red;
+    border-radius: 15px;
+    
+}
+.hoverDiv button:hover{
+    cursor: pointer;
+    color: rgb(168, 117, 117);
+}
+.hoverDiv p{
+    position: relative;
+    /* border: 1px solid; */
+    top: 150px;
+    left: 10px;
+    z-index: 5555;
+    /* left: 390%; */
+    font-size: larger;
+    font-weight: 800;
+    
+}
+.buttonFrcancle{
+    position: relative;
+    bottom: 21px;
+    left: 11px;
+    background-color: inherit;
+    border: none;
+    color: gray;
+    cursor: pointer;
+}
+.buttonFrcancle:hover{
+    color: black;
+}
